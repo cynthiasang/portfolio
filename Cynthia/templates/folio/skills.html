@@ -1,0 +1,41 @@
+<!-- ECHO is on. -->
+{% load staticfiles %}
+{% include 'folio/navbar.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" height="42" width="42"  href="{% static 'images/yz.png' %}">
+    <title>skills</title>
+</head>
+<body>
+    
+    <!-- skills section start -->
+    <section class="skills" id="skills">
+        <div class="max-width">
+            <h2 class="title">My skills</h2>
+            <div class="skills-content">
+                {% for s in skills %}
+                <div class="column left">
+                    <div class="text">{{s.title}}</div>
+                    <p>{{s.description}}</p>
+                    
+                </div>
+                <div class="column right">
+                    <div class="bars">
+                        <div class="info">
+                            <span>{{s.type}}</span>
+                            <span>{{s.percentage}}</span>
+                        </div>
+                        <div class="line html"></div>
+                    </div>
+                </div>
+                {% endfor %}
+                <a href="#">Read more</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

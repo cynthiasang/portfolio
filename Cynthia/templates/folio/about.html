@@ -1,0 +1,46 @@
+<!-- ECHO is on. -->
+{% load staticfiles %}
+{% include 'folio/navbar.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" height="42" width="42"  href="{% static 'images/yz.png' %}">
+    <title>about</title>
+    <link rel="stylesheet" href="{% static  'style/style.css' %}"/>
+    
+        
+
+</head>
+<body class="about_body">
+    <section class="about" id="about">
+      
+        <div class="max-width">
+            <h2 class="title">About me,    </h2>
+            {% for x in about %}
+            <div class="about-content">
+                {% if x.image %}
+                <div class="column left">
+                    
+                    <img src="{{ x.image.url }}">
+                </div>
+                {% endif %}
+
+                <div class="column right">
+                    <hr style="height:1px">
+                    <div class="text">I'm Cynthia:</div>
+
+                    <div class="msg">
+                        <p><strong>Posted By :{{x.by}} || {{x.date}} </strong><br>{{x.message}}</p>
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+           
+        </div>
+    </section>
+</body>
+</html>

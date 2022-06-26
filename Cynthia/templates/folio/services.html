@@ -1,0 +1,42 @@
+<!-- ECHO is on. -->
+{% load staticfiles %}
+{% include 'folio/navbar.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" height="42" width="42"  href="{% static 'images/yz.png' %}">
+    <script src="{% static 'script.js ' %} "></script>
+    <link  href="{% static 'style/style.css' %}" rel="stylesheet"/>
+
+    <title>services</title>
+    <style>
+  
+    </style>
+</head>
+<body>
+    
+
+    
+    <!-- services section start -->
+    <section class="services" id="services">
+        <div class="max-width">
+            <h2 class="title">My services</h2>
+            <div class="serv-content">
+                {% for s in a %}
+                <div class="card">
+                    <div class="box">
+                        <i class="fas fa-paint-brush"></i>
+                        <div class="text">{{s.name}}</div>
+                        <p>{{s.details}}</p>
+                    </div>
+                </div>
+                {% endfor %}
+               </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
