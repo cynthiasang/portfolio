@@ -1,0 +1,121 @@
+{% load staticfiles %}
+{% include 'folio/navbar.html'%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" height="42" width="42"  href="{% static 'images/yz.png' %}">
+    <link rel="stylesheet" href="{% static  'style/style.css' %}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home: :</title>
+    <style>
+        .background{
+            margin-left:-400px;
+            margin-bottom:-30px;
+            height:30px;
+            width:35%;
+            background-position:center;
+            overflow:hidden;
+            padding-bottom:500px;
+            z-index:1;
+        }
+        .bg{
+            background:pink;
+        }
+        .icon-bar {
+            position: fixed;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+          }
+          
+          .icon-bar a {
+            display: block;
+            text-align: center;
+            padding: 16px;
+            transition: all 0.3s ease;
+            color: white;
+            font-size: 20px;
+          }
+          
+          .icon-bar a:hover {
+            background-color: #000;
+          }
+          
+          .facebook {
+            background: #3B5998;
+            color: white;
+          }
+          
+          .twitter {
+            background: #55ACEE;
+            color: white;
+          }
+          
+          .google {
+            background: #dd4b39;
+            color: white;
+          }
+          
+          .linkedin {
+            background: #007bb5;
+            color: white;
+          }
+          
+          .youtube {
+            background: #bb0000;
+            color: white;
+          }
+          .what {
+            background: #25d366;
+            color: white;
+          }
+          
+          .content {
+            margin-left: 75px;
+            font-size: 30px;
+          }
+    </style>
+</head>
+<body div class="bg">
+    
+
+    <section class="home" id="home">
+        <div class="max-width">
+            <div class="home-content">
+                <div class="text-1">Cynthia Sang,<br> <br> Welcome to my portfolio!<br><br></div>
+                <div class="text-2">I spend my time building intelligent systems that unlock value from data,<br>
+                    meeting business needs,solving problems and making an impact!
+                </div>
+                <div class="text-3">Below are some of my selected projects  <span>Feel free to reach out to me<br>
+                Thank you. </spa></div>
+                <a href="#">Developer</a>
+            </div>
+        </div>
+        <div class="background">
+
+            <img src = "{% static '/images/cynthia.png' %}" alt = "Test Image" />
+        </div>
+    </section>
+    <div class="icon-bar">
+        <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
+        <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
+        <a href="#" class="google"><i class="fa fa-google"></i></a> 
+        <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
+        <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
+        <a href="https://api.whatsapp.com/send?phone=0742421351&text=Hello%20cynthia.%0d%0aHow%20are%20you%20%3f%0d%0aI%20came%20from%20your%20website.&source=&data=#" class="what"><i class="fa fa-whatsapp"></i></a> 
+        
+        
+      </div>
+<style>
+    /* .bg{
+        height: 50px;
+        width: 80px;
+        position: relative;
+    } */
+</style>
+</body>
+</html>
